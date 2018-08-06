@@ -31,32 +31,34 @@
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form  autocomplete="on" id="loginForm" action="/UserManagement/Controller/login_signup.php" method="POST"> 
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email </label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="mymail@mail.com"/>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myEmail@mail.com"/>
+                                    <span style="color:red;font-style: italic;" id="errorusername"></span>
                                 </p>
                                 <p> 
                                     <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. a12345" />
+                                    <span style="color:red;font-style: italic;" id="errorpassword"></span>
                                 </p>
                                 <p class="keeplogin"> 
-									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-									<label for="loginkeeping">Keep me logged in</label>
-								</p>
+									         <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									         <label for="loginkeeping">Keep me logged in</label>
+								       </p>
                                 <p class="login button"> 
-                                    <input type="submit" value="Login" /> 
-								</p>
+                                    <input type="button" value="Login" id="loginform"/> 
+								       </p>
                                 <p class="change_link">
 									Not a member yet ?
-									<a href="#toregister" class="to_register">Join us</a>
-								</p>
+									      <a href="#toregister" class="to_register">Join us</a>
+								       </p>
                             </form>
                         </div>
 
                         <div id="register" class="animate form">
-                            <form  action="mysuperscript.php" autocomplete="on"> 
+                            <form  action="" autocomplete="on"> 
                                 <h1> Sign up </h1> 
                                 <p> 
                                     <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
@@ -103,5 +105,10 @@
                 </div>  
             </section>
         </div>
+
+        <script type="text/javascript" src = "../Public/Js/xhtmlrequest.js"></script>
+        <script type="text/javascript" src = "../Public/Js/login_signup.js"></script>
+        
+
     </body>
 </html>

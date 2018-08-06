@@ -1,6 +1,6 @@
 <?php
 
-	header("Location: Controller/login_signup.php");
+	header("Location: View/login.php");
     die();
 
 ?>	
